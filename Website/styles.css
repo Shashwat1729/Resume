@@ -1,0 +1,355 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Updated background color */
+    transition: margin-left 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #333333; /* Updated background color */
+    color: #ffffff; /* Updated text color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    scroll-margin-left: 175px;
+    scroll-margin-right: 0;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px; /* Increased margin-bottom value */
+    transition: transform 0.3s ease-in-out, border-radius 0.5s ease-in-out, margin-right 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.name {
+    font-size: 30px;
+    margin: 30px;
+    margin-left: 50px;
+    text-align: left;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.name:hover {
+    color: #cccccc; /* Updated hover color */
+    transform: translate(0, 0) scale(1.08) !important;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+header .name {
+    transform: translateX(0) scale(1);
+    transition: transform 0.4s ease-in-out;
+}
+.profile-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+    align-self: flex-end;
+    margin-right: 30px;
+    transform: translateX(0);
+}
+
+.profile-photo:hover {
+    transform: translateX(-50px) scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Section Styles */
+section {
+    margin-top: 30px;
+    margin-bottom: 30px; /* Increased margin-bottom value */
+    scroll-margin-left: 175px;
+    scroll-margin-right: 0;
+    margin-left: 50px;
+    margin-right: 30px;
+    padding: 26px;
+    background-color: #ffffff; /* Updated background color */
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateX(-75px);
+    transition: transform 0.2s ease, opacity 0.5s ease;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+section:hover {
+    opacity: 1;
+    transform: translate(85px, 0) scale(1.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    margin: 0;
+    display: inline-block;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation Styles */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Skills Styles */
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li,
+.projects ul li,
+.certifications p,
+.languages ul li {
+    animation: fadeInAnimation 1.5s ease;
+    transform: scale(1);
+    transition: transform 0.75s ease;
+}
+
+.skills li {
+    background-color: #057097; /* Updated background color */
+    color: #ffffff; /* Updated text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.projects ul li {
+    margin-bottom: 20px;
+}
+
+.certifications p {
+    margin: 0;
+}
+
+.languages ul li {
+    margin-bottom: 10px;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Updated color */
+    margin-bottom: 5px;
+    transition: transform 0.5s ease;
+}
+
+.open.menu-btn span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.open.menu-btn span:nth-child(2) {
+    transform: translateX(-50px);
+    opacity: 0 ease-in-out;
+    transition: transform 0.3 ease-in-out, ;
+}
+
+.open.menu-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.left-menu {
+    font-size: 21.5px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 310px;
+    height: 100%;
+    background-color: #057097;
+    padding: 20px;
+    transition: left 0.5s ease;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.open.left-menu {
+    left: 0;
+}
+
+.left-menu ul {
+    margin-top: 100px;
+}
+
+.left-menu ul li {
+    margin-bottom: 20px;
+}
+
+.left-menu ul li a {
+    color: #ffffff; /* Updated text color */
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.left-menu ul li a:hover {
+    color: #cccccc; /* Updated hover color */
+    transform: translate(0, 0) scale(1.08) !important;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation ease 1s;
+    animation-fill-mode: forwards;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 10%;
+    left: 10px;
+    z-index: 999;
+    cursor: pointer;
+    width: 35px;
+    height: 15px;
+    background-color: #ffffff; /* Updated background color */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease, background-color 0.3s ease-in-out;
+}
+
+.half-moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333333; /* Updated color */
+    border-radius: 50%;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff; /* Updated background color */
+    box-shadow: 4px 0 0 #333333; /* Updated color */
+}
+
+.dark-mode header {
+    background-color: #272727;
+}
+
+.dark-mode .left-menu {
+    background-color: #272727;
+    transition: background-color ease-in, border-radius 0.5s ease-in-out;
+}
+
+.dark-mode body {
+    background-color: #272727;
+    transition: background-color ease-in, border-radius 0.5s ease-in-out;
+}
+
+.dark-mode section {
+    background-color: #272727; /* Updated background color */
+    color: #ffffff; /* Updated text color */
+    transition: background-color ease-in, color 0.3s ease-in-out, border-radius 0.5s ease-in-out;
+}
+.dark-mode .dark-mode-toggle {
+    background-color: #333333;
+    transition: margin-left 0.2s ease-in-out;
+}
+
+.dark-mode section#contact a[href*="twitter.com"] i.fab.fa-twitter,
+.dark-mode section#contact a[href*="instagram.com"] i.fab.fa-instagram,
+.dark-mode section#contact a[href*="facebook.com"] i.fab.fa-facebook-f,
+.dark-mode section#contact a[href*="linkedin.com"] i.fab.fa-linkedin-in,
+.dark-mode section#projects a[href*="github.com"] i.fab.fa-github,
+.dark-mode section#contact li strong i.fas.fa-home,
+.dark-mode section#contact li strong i.fas.fa-phone,
+.dark-mode section#contact li strong i.fas.fa-envelope {
+    color: #ffffff !important;
+}
+
+.open.left-menu ~ header,
+.open.left-menu ~ section {
+    transform: translate(140px, 40px) scale(1.08);
+    transition: transform 0.5s ease-in;
+    align-self: top;
+    margin-left: 140px;
+    margin-top: 0;
+    margin-right: 30px; /* Add margin-right when left-menu is open */
+    scroll-margin-right: 30px; /* Add scroll-margin-right when left-menu is open */
+}
+
+.close.left-menu ~ header,
+.close.left-menu ~ section {
+    margin-right: 0 !important; /* Change to 0 when left-menu is closed */
+    scroll-margin-right: 0 !important; /* Change to 0 when left-menu is closed */
+    transform: translate(0, 0) scale(1) !important;
+    transition: transform 0.5s ease-in-out;
+}
+
+.open.left-menu ~ header .profile-photo {
+    align-self: flex-start;
+    margin-right: 30px; /* Adjust the margin-right value */
+    transform: translateX(-800px) scale(1.08); /* Adjust the translation value */
+    transition: transform 0.4s ease-in-out;
+}
+
+.close.left-menu ~ header .profile-photo {
+    margin-right: 30px; /* Adjust the margin-right value */
+    transform: translateX(0) scale(1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.open.left-menu ~ header .profile-photo:hover {
+    align-self: flex-start;
+    margin-right: 30px; /* Adjust the margin-right value */
+    transform: translateX(-800px) scale(1.25); /* Adjust the translation value */
+    transition: transform 0.2s ease-in-out;
+}
+
+.dark-mode .name:hover {
+    color: #cccccc; /* Updated hover color */
+    transform: translate(0, 0) scale(1.08) !important;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dark-mode .skills li {
+    background-color: #ffffff; /* Updated background color */
+    color: #333333; /* Updated text color */
+}
+
+.dark-mode .dark-mode-toggle {
+    background-color: #ffffff; /* Updated background color */
+}
+
+.dark-mode .half-moon {
+    background-color: #ffffff; /* Updated background color */
+    box-shadow: -4px 0 0 #333333; /* Updated color */
+}
+
+.dark-mode .left-menu ul li a:hover {
+    color: #cccccc; /* Updated hover color */
+    transform: translate(0, 0) scale(1.08) !important;
+    transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
