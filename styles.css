@@ -3,8 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Updated background color */
+    background-color: #f2f2f2;
     transition: margin-left 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+    font-size: 16px;
 }
 
 ul,
@@ -16,8 +17,8 @@ li {
 
 /* Header Styles */
 header {
-    background-color: #333333; /* Updated background color */
-    color: #ffffff; /* Updated text color */
+    background-color: #333333;
+    color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -26,38 +27,40 @@ header {
     scroll-margin-right: 0;
     margin-left: 20px;
     margin-right: 30px;
-    margin-bottom: 30px; /* Increased margin-bottom value */
-    transition: transform 0.3s ease-in-out, border-radius 0.5s ease-in-out, margin-right 0.3s ease-in-out;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, border-radius 0.5s ease-in-out;
     border-radius: 15px;
 }
 
 .name {
-    font-size: 30px;
-    margin: 30px;
-    margin-left: 50px;
+    font-size: 1.5rem;
+    margin: 1.875rem;
+    margin-left: 3.125rem;
     text-align: left;
     transform: scale(1);
     transition: transform 0.5s ease;
 }
 
 .name:hover {
-    color: #cccccc; /* Updated hover color */
+    color: #cccccc;
     transform: translate(0, 0) scale(1.08) !important;
     transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
+
 header .name {
     transform: translateX(0) scale(1);
     transition: transform 0.4s ease-in-out;
 }
+
 .profile-photo {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
     align-self: flex-end;
-    margin-right: 30px;
+    margin-right: 3.125rem;
     transform: translateX(0);
 }
 
@@ -69,13 +72,13 @@ header .name {
 /* Section Styles */
 section {
     margin-top: 30px;
-    margin-bottom: 30px; /* Increased margin-bottom value */
+    margin-bottom: 30px;
     scroll-margin-left: 175px;
     scroll-margin-right: 0;
-    margin-left: 50px;
-    margin-right: 30px;
-    padding: 26px;
-    background-color: #ffffff; /* Updated background color */
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+    padding: 1.625rem;
+    background-color: #ffffff;
     border-radius: 15px;
     opacity: 0;
     transform: translateX(-75px);
@@ -130,11 +133,12 @@ h2 {
 }
 
 .skills li {
-    background-color: #057097; /* Updated background color */
-    color: #ffffff; /* Updated text color */
+    background-color: #057097;
+    color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .projects ul li {
@@ -151,8 +155,8 @@ h2 {
 
 .menu-btn {
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 1rem;
+    left: 1rem;
     z-index: 999;
     cursor: pointer;
     transition: transform 0.5s ease;
@@ -162,7 +166,7 @@ h2 {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #ffffff; /* Updated color */
+    background-color: #ffffff;
     margin-bottom: 5px;
     transition: transform 0.5s ease;
 }
@@ -182,14 +186,14 @@ h2 {
 }
 
 .left-menu {
-    font-size: 21.5px;
+    font-size: 1.34rem;
     position: fixed;
     top: 0;
     left: -300px;
     width: 310px;
     height: 100%;
     background-color: #057097;
-    padding: 20px;
+    padding: 1.25rem;
     transition: left 0.5s ease;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -208,13 +212,13 @@ h2 {
 }
 
 .left-menu ul li a {
-    color: #ffffff; /* Updated text color */
+    color: #ffffff;
     text-decoration: none;
     transform: scale(1);
 }
 
 .left-menu ul li a:hover {
-    color: #cccccc; /* Updated hover color */
+    color: #cccccc;
     transform: translate(0, 0) scale(1.08) !important;
     transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -228,12 +232,12 @@ h2 {
 .dark-mode-toggle {
     position: fixed;
     top: 10%;
-    left: 10px;
+    left: 0.75rem;
     z-index: 999;
     cursor: pointer;
     width: 35px;
     height: 15px;
-    background-color: #ffffff; /* Updated background color */
+    background-color: #ffffff;
     border-radius: 10px;
     margin-bottom: 20px;
     transition: transform 0.5s ease, background-color 0.3s ease-in-out;
@@ -245,13 +249,13 @@ h2 {
     transform: translateY(-50%);
     width: 10px;
     height: 10px;
-    background-color: #333333; /* Updated color */
+    background-color: #333333;
     border-radius: 50%;
     left: 10px;
     width: 10px;
     height: 10px;
-    background-color: #ffffff; /* Updated background color */
-    box-shadow: 4px 0 0 #333333; /* Updated color */
+    background-color: #ffffff;
+    box-shadow: 4px 0 0 #333333;
 }
 
 .dark-mode header {
@@ -269,12 +273,14 @@ h2 {
 }
 
 .dark-mode section {
-    background-color: #272727; /* Updated background color */
-    color: #ffffff; /* Updated text color */
+    background-color: #272727;
+    color: #ffffff;
     transition: background-color ease-in, color 0.3s ease-in-out, border-radius 0.5s ease-in-out;
 }
+
 .dark-mode .dark-mode-toggle {
     background-color: #333333;
+    color: #333333;
     transition: margin-left 0.2s ease-in-out;
 }
 
@@ -296,60 +302,51 @@ h2 {
     align-self: top;
     margin-left: 140px;
     margin-top: 0;
-    margin-right: 30px; /* Add margin-right when left-menu is open */
-    scroll-margin-right: 30px; /* Add scroll-margin-right when left-menu is open */
+    margin-right: 30px;
+    scroll-margin-right: 30px;
 }
 
 .close.left-menu ~ header,
 .close.left-menu ~ section {
-    margin-right: 0 !important; /* Change to 0 when left-menu is closed */
-    scroll-margin-right: 0 !important; /* Change to 0 when left-menu is closed */
+    margin-right: 0 !important;
+    scroll-margin-right: 0 !important;
     transform: translate(0, 0) scale(1) !important;
     transition: transform 0.5s ease-in-out;
 }
 
 .open.left-menu ~ header .profile-photo {
     align-self: flex-start;
-    margin-right: 30px; /* Adjust the margin-right value */
-    transform: translateX(-800px) scale(1.08); /* Adjust the translation value */
+    margin-right: 30px;
+    transform: translateX(-800px) scale(1.08);
     transition: transform 0.4s ease-in-out;
 }
 
 .close.left-menu ~ header .profile-photo {
-    margin-right: 30px; /* Adjust the margin-right value */
+    margin-right: 30px;
     transform: translateX(0) scale(1);
     transition: transform 0.4s ease-in-out;
 }
 
 .open.left-menu ~ header .profile-photo:hover {
     align-self: flex-start;
-    margin-right: 30px; /* Adjust the margin-right value */
-    transform: translateX(-800px) scale(1.25); /* Adjust the translation value */
+    margin-right: 30px;
+    transform: translateX(-800px) scale(1.25);
     transition: transform 0.2s ease-in-out;
 }
 
 .dark-mode .name:hover {
-    color: #cccccc; /* Updated hover color */
+    color: #cccccc;
     transform: translate(0, 0) scale(1.08) !important;
     transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .dark-mode .skills li {
-    background-color: #ffffff; /* Updated background color */
-    color: #333333; /* Updated text color */
-}
-
-.dark-mode .dark-mode-toggle {
-    background-color: #ffffff; /* Updated background color */
-}
-
-.dark-mode .half-moon {
-    background-color: #ffffff; /* Updated background color */
-    box-shadow: -4px 0 0 #333333; /* Updated color */
+    background-color: #ffffff;
+    color: #333333;
 }
 
 .dark-mode .left-menu ul li a:hover {
-    color: #cccccc; /* Updated hover color */
+    color: #cccccc;
     transform: translate(0, 0) scale(1.08) !important;
     transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
