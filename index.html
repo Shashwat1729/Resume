@@ -18,10 +18,11 @@
     <div class="left-menu">
       <h2>Left Menu</h2>
       <ul>
-          <div id="dark-mode-toggle" class="dark-mode-toggle">
-              <div class="moon"></div>
-              <div class="half-moon"></div>
-          </div>
+        <div class="dark-mode-toggle">
+          <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+          <label class="slider" for="dark-mode-toggle"></label>
+          <div class="half-moon"></div>
+        </div>
           <li><a href="#header">Home</a></li>
           <li><a href="#About-Me">About Me</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -37,7 +38,7 @@
     
     <header id="header">
         <h1 class="name fade-in">Shashwat Bajpai</h1>
-        <img class="profile-photo" src="Images/profile-photo.png" alt="Profile Photo" style="width: 125px; height: 125px;">
+        <img class="profile-photo " src="Images/profile-photo.png" alt="Profile Photo" style="width: 125px; height: 125px;">
     </header>
     
     <section id="About-Me" class="About-Me">
@@ -116,16 +117,24 @@
         </ul>
       </section>
       <br>
-    <section id="skills" class="skills">
+      <section id="skills" class="skills">
         <h2 class="section-heading fade-in">Skills</h2><br><br>
         <ul>
           <li>
             <strong>Programming Languages:</strong>
-            <div>Java, C, C++, Python, R, Stata, Solidity</div>
+            <div>Java, C, C++, Python, Go, R, Stata, LaTex, Kotlin</div>
           </li>
           <li>
             <strong>Web Development:</strong>
             <div>HTML, CSS, JavaScript</div>
+          </li>
+          <li>
+            <strong>Database:</strong>
+            <div>SQL, MongoDB</div>
+          </li>
+          <li>
+            <strong>Blockchain:</strong>
+            <div>Solidity</div>
           </li>
         </ul>
       </section>

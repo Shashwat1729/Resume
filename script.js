@@ -79,3 +79,18 @@ document.addEventListener("DOMContentLoaded", function() {
     
     checkInView();
 });
+const section = document.querySelector('section');
+        const profilePhoto = document.querySelector('.profile-photo');
+
+        function disableHoverOnOverlap(element) {
+            element.addEventListener('mouseover', function () {
+                element.classList.add('no-hover');
+            });
+
+            element.addEventListener('mouseout', function () {
+                element.classList.remove('no-hover');
+            });
+        }
+
+        disableHoverOnOverlap(section);
+        disableHoverOnOverlap(profilePhoto);
