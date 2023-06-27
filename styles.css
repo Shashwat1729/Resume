@@ -473,8 +473,25 @@ footer {
 .footer-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 5px;
+}
+
+.arrow {
+  width: 100px;
+  height: 175px;
+  border-right: 12.5px solid #ffffff;
+  border-left: 12.5px solid #ffffff;
+}
+
+.footer-heading {
+  padding: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-left: 12.5%;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .profile-photo-f {
@@ -502,23 +519,14 @@ footer {
   text-align: left;
 }
 
-.footer-heading {
-  padding: 10px;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  margin-left: 12.5%;
-  text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .footer-name,
 .footer-info,
 .footer-credit {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 5px;
-  line-height: 1.6;
+  line-height: 2;
 }
+
 
 .footer-icon {
   margin-right: 5px;
