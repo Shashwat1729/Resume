@@ -75,17 +75,15 @@ body {
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Section Styles */
   section {
-    margin: 30px 60px 30px;
-    margin-bottom: 70px;
+    margin: 30px 60px;
     padding: 1.625rem;
     background-color: #ffffff;
     border-radius: 15px;
     opacity: 0;
     transform: translateX(-75px);
-    background-image: linear-gradient(to right, #eeeeee, #f5f5f5, #fafafa, #fdfdfd, #ffffff,#ffffff, #fdfdfd, #fafafa, #f5f5f5, #eeeeee);
-    transition: transform 0.2s ease, opacity 0.5s ease, margin-left 0.2s ease;
+    background-image: linear-gradient(to right, #eeeeee, #f5f5f5, #fafafa, #fdfdfd, #ffffff, #ffffff, #fdfdfd, #fafafa, #f5f5f5, #eeeeee);
+    transition: transform 0.2s ease, opacity 0.5s ease;
     scroll-margin-left: 175px;
     scroll-margin-right: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
@@ -110,13 +108,32 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
+  
+  /* Adjust the margin for specific sections */
+  
+  .about {
+    margin-bottom: 40px;
+  }
+  
+  .contact {
+    margin-top: 40px;
+  }
+  
+  .education,
+  .projects,
+  .certifications{
+    margin-bottom: 20px;
+  }
+  .languages {
+    margin-bottom: 60px;
+  }
   /* Skills Styles */
   .skills ul {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .about ul li,
+  .about p,
   .contact ul li,
   .education ul li,
   .skills li,
@@ -134,9 +151,8 @@ body {
     border-radius: 5px;
     margin-right: 10px;
     font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(81, 86, 87, 0.542); /* Add box shadow */
+    box-shadow: 0 2px 5px rgba(81, 86, 87, 0.542);
     background-image: repeating-linear-gradient(-45deg, #057097, #045478);
-    
   }
   
   .menu-btn {
@@ -186,12 +202,11 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-image: linear-gradient(to top, #057097, #045478);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Add box shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     z-index: 3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .open.left-menu {
@@ -200,18 +215,33 @@ body {
   }
   
   .left-menu ul {
-    margin-top: 100px;
+    opacity: 0;
+    margin-top: 60px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+    list-style: none;
+  }
+  
+  .open.left-menu ul {
+    opacity: 1;
   }
   
   .left-menu ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .left-menu ul li a {
+    opacity: 1;
     color: #ffffff;
     text-decoration: none;
     transform: scale(1);
     position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  .open.left-menu ul li a {
+    opacity: 1;
   }
   
   .left-menu ul li a:hover {
@@ -222,10 +252,10 @@ body {
     content: "";
     position: absolute;
     top: 50%;
-    left: -10px;
+    left: -5px;
     transform: translateY(-50%);
-    width: 5px;
-    height: 80%;
+    width: 2px;
+    height: 60%;
     background-color: #ffffff;
     border-radius: 5px;
     opacity: 1;
@@ -238,72 +268,77 @@ body {
     animation: fadeInAnimation ease 1s;
     animation-fill-mode: forwards;
   }
-  
-  /* Dark Mode Toggle */
-  .dark-mode-toggle {
-    position: fixed;
-    top: 75px;
-    left: 5px;
-    z-index: 999;
-    cursor: pointer;
-    width: 40px;
-    height: 25px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-image: linear-gradient(to bottom, #ffffff, #cccccc);
-    transition: transform 0.5s ease, background-color 0.3s ease-in-out;
-  }
-  
-  .dark-mode-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    --background: #333333;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--background);
-    transition: .5s;
-    border-radius: 10px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    border-radius: 10px;
-    left: 4px;
-    bottom: 6px;
-    box-shadow: inset 6px -3px 0px 0px #ffffff;
-    background: var(--background);
-    transition: .5s;
-  }
-  
-  .dark-mode-toggle input:checked + .slider {
-    background-color: #333333;
-  }
-  
-  .dark-mode-toggle input:checked + .slider:before {
-    transform: translateX(100%);
-    box-shadow: inset 12px -3px 0px 12px #ffffff;
-  }
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  padding: 0.25px;
+  opacity: 0;
+  position: fixed;
+  top: 60px;
+  left: 170px; /* Adjust the left value to position the toggle horizontally */
+  margin-left: 30px; /* Adjust the margin-left value to fine-tune the position */
+  z-index: 999;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+  transition: transform 0.5s ease, background-color 0.3s ease-in-out;
+}
+
+.dark-mode-toggle input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  --background: #333333;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 25px;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 12.5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  left: 5px;
+  bottom: 5px;
+  box-shadow: inset 6px -3px 0px 0px #ffffff;
+  background: var(--background);
+  transition: .5s;
+}
+
+.dark-mode-toggle input:checked + .slider {
+  background-color: #333333;
+}
+
+.dark-mode-toggle input:checked + .slider:before {
+  transform: translateX(200%);
+  box-shadow: inset 12px -3px 0px 12px #ffffff;
+}
   .open.left-menu .dark-mode-toggle {
-    left: 15px !important;
-    transition: left 0.1s ease-in-out;
+    opacity: 1;
+    left: 15px;
+    transition: opacity 0.1s ease-in-out;
+    transition-delay: 0.4s smooth;
   }
   
   .open.left-menu .menu-btn {
-    left: 150px !important;
+    left: 175px; /* Adjusted value for better positioning */
     transition: left 0.1s ease-in-out;
-  }   
+  }  
   .dark-mode .left-menu {
     background-color: #272727;
     background-image: linear-gradient(to top, #272727, #222222, #111111);
@@ -370,7 +405,8 @@ body {
     margin-top: 30px;
     margin-right: 30px;
     scroll-margin-right: 0;
-    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    scroll-margin-top: 0;
+    transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
     z-index: 3;
 
   }
@@ -426,7 +462,6 @@ body {
   
   
 /* Footer styles */
-/* Footer styles */
 footer {
   background-color: #333333;
   background-image: radial-gradient(circle at 20% 50%, #333333, #222222, #111111);
@@ -438,34 +473,41 @@ footer {
 .footer-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 .profile-photo-f {
-  width: 300px;
-  height: 300px;
+  position: relative;
+  width: 200px;
+  height: 200px;
   border: 2px solid #ffffff;
-  padding: 5px;
-  border-radius: 50%;
-  margin-right: 20px;
-  margin-left: 175px;
+  padding: 2px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #333333;
   background-image: radial-gradient(circle at center, #d3d3d3, #333333);
-  background-position: center;
+  background-position: left;
   background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .footer-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .footer-heading {
+  padding: 10px;
   font-size: 2.5rem;
-  text-align: right;
   margin-bottom: 10px;
+  margin-left: 12.5%;
+  text-align: left;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -473,14 +515,12 @@ footer {
 .footer-name,
 .footer-info,
 .footer-credit {
-  font-size: 1.3rem;
-  text-align: right;
+  font-size: 0.9rem;
   margin-bottom: 5px;
   line-height: 1.6;
 }
 
 .footer-icon {
-  display: inline-block;
   margin-right: 5px;
   font-size: 1.3rem;
   color: #ffffff;
@@ -500,7 +540,6 @@ footer {
 }
 
 .footer-credit {
-  font-size: 1rem;
   opacity: 0.7;
   margin-top: 20px;
 }
@@ -520,6 +559,7 @@ footer {
 
 .footer-content ul li .footer-icon {
   margin-right: 10px;
+  font-size: 1.1rem;
 }
 
 .footer-content ul li a {
@@ -530,60 +570,106 @@ footer {
 
 .footer-content ul li a:hover {
   color: #ffcc00;
+  text-decoration: underline;
 }
-@media only screen and (max-width: 600px) {
-  /* Adjust the font size for body */
+
+/* Additional improvements */
+.footer-container a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+  color: #ffcc00;
+}
+
+.footer-container a svg {
+  margin-right: 5px;
+}
+
+.footer-container p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
   body {
-    font-size: 15px;
+    font-size: 16px;
   }
 
-  /* Adjust the font size for .name */
+  header {
+    margin: 0 15px 15px;
+  }
+
   .name {
     font-size: 1.5rem;
+    margin: 1rem 1.5rem;
   }
-
-  /* Adjust the margin for header */
-  header {
-    margin: 0 5px 5px;
+  .dark-mode-toggle{
+    opacity: 0;
+    margin-left: -3px;
+    width: 30px;
   }
-
-  /* Adjust the margin for section */
-  section {
-    margin: 5px;
-    margin-bottom: 15px;
+  .slider{
+    width: 30px;
   }
-
-  /* Adjust the margin for .profile-photo */
   .profile-photo {
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1.5rem;
   }
 
-  /* Adjust the margin for .open.left-menu ~ header and .open.left-menu ~ section */
+  section {
+    margin: 15px;
+    margin-bottom: 50px;
+    padding: 2rem;
+  }
+
+  .left-menu {
+    left: -12.25rem;
+    width: 200px;
+  }
+
+  .open.left-menu {
+    left: 0;
+    width: 110px;
+  }
+  .left-menu ul {
+    margin-top: 10px;
+  }
+  
+  .left-menu ul li {
+    margin-left: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .left-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1);
+    position: relative;
+  }
   .open.left-menu ~ header,
   .open.left-menu ~ section {
-    transform: translate(0, 20px) scale(1.08);
+    transform: translate(30px, 40px) scale(0.9);
+    transition: transform 0.5s ease-in;
+    align-self: top;
+    margin-left: 120px;
+    margin-top: 0;
+    margin-right: 30px;
+    scroll-margin-right: 30px;
+    z-index: 1;
   }
-
-  /* Adjust the margin for .open.left-menu ~ header .profile-photo */
   .open.left-menu ~ header .profile-photo {
-    margin-right: 15px;
+    align-self: flex-start;
+    transform: translateX(0) scale(0.8);
+    transition: transform 0.4s ease-in-out;
   }
 
-  /* Adjust the margin for .close.left-menu ~ header and .close.left-menu ~ section */
-  .close.left-menu ~ header,
-  .close.left-menu ~ section {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  /* Adjust the margin for .close.left-menu ~ header .profile-photo */
-  .close.left-menu ~ header .profile-photo {
-    margin-right: 30px;
-  }
-
-  /* Adjust the margin for .open.left-menu ~ header .profile-photo:hover */
-  .open.left-menu ~ header .profile-photo:hover {
-    margin-right: 30px;
+  .menu-btn {
+    top: 0.5rem;
+    left: 0.5rem;
   }
 }
