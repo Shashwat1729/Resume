@@ -56,6 +56,7 @@ body {
   .profile-photo {
     position: relative;
     background-color: #d3d3d3;
+    padding: 3px;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
@@ -77,6 +78,7 @@ body {
   /* Section Styles */
   section {
     margin: 30px 60px 30px;
+    margin-bottom: 70px;
     padding: 1.625rem;
     background-color: #ffffff;
     border-radius: 15px;
@@ -321,6 +323,10 @@ body {
     transition: background-color 0.1s ease-in, color 0.3s ease-in-out, border-radius 0.5s ease-in-out;
     box-shadow: 0 2px 5px rgba(81, 86, 87, 0.542) /* Add box shadow */
   }
+  .dark-mode section:hover {
+    transform: translateX(85px) scale(1.08);
+    transition: transform 0.15s ease-in-out;
+  }
   .dark-mode header {
     background-color: #272727;
     color: #ffffff;
@@ -398,7 +404,7 @@ body {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     outline: 2px solid #ffffff; 
     z-index: 9999;
@@ -408,8 +414,9 @@ body {
     opacity: 1;
     visibility: visible;
   }
+  
   #goToTopBtn:hover {
-    transform: translateY(-5px);
+    transform: rotate(360deg) scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
   }
   
@@ -417,6 +424,8 @@ body {
     font-size: 20px;
   }
   
+  
+/* Footer styles */
 /* Footer styles */
 footer {
   background-color: #333333;
@@ -437,6 +446,7 @@ footer {
   width: 300px;
   height: 300px;
   border: 2px solid #ffffff;
+  padding: 5px;
   border-radius: 50%;
   margin-right: 20px;
   margin-left: 175px;
@@ -449,7 +459,7 @@ footer {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .footer-heading {
@@ -468,6 +478,7 @@ footer {
   margin-bottom: 5px;
   line-height: 1.6;
 }
+
 .footer-icon {
   display: inline-block;
   margin-right: 5px;
@@ -475,6 +486,7 @@ footer {
   color: #ffffff;
   vertical-align: middle;
 }
+
 .footer-info a,
 .footer-credit a {
   color: #ffffff;
@@ -491,4 +503,87 @@ footer {
   font-size: 1rem;
   opacity: 0.7;
   margin-top: 20px;
+}
+
+/* Improved ul li styles */
+.footer-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content ul li .footer-icon {
+  margin-right: 10px;
+}
+
+.footer-content ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+  color: #ffcc00;
+}
+@media only screen and (max-width: 600px) {
+  /* Adjust the font size for body */
+  body {
+    font-size: 15px;
+  }
+
+  /* Adjust the font size for .name */
+  .name {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust the margin for header */
+  header {
+    margin: 0 5px 5px;
+  }
+
+  /* Adjust the margin for section */
+  section {
+    margin: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* Adjust the margin for .profile-photo */
+  .profile-photo {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  /* Adjust the margin for .open.left-menu ~ header and .open.left-menu ~ section */
+  .open.left-menu ~ header,
+  .open.left-menu ~ section {
+    transform: translate(0, 20px) scale(1.08);
+  }
+
+  /* Adjust the margin for .open.left-menu ~ header .profile-photo */
+  .open.left-menu ~ header .profile-photo {
+    margin-right: 15px;
+  }
+
+  /* Adjust the margin for .close.left-menu ~ header and .close.left-menu ~ section */
+  .close.left-menu ~ header,
+  .close.left-menu ~ section {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  /* Adjust the margin for .close.left-menu ~ header .profile-photo */
+  .close.left-menu ~ header .profile-photo {
+    margin-right: 30px;
+  }
+
+  /* Adjust the margin for .open.left-menu ~ header .profile-photo:hover */
+  .open.left-menu ~ header .profile-photo:hover {
+    margin-right: 30px;
+  }
 }
