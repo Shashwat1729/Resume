@@ -2,95 +2,116 @@
 function smoothScroll(target) {
     const element = document.querySelector(target);
     const offset = 80; // Adjust this value to set the offset for the scrolling position
-
+  
     window.scrollTo({
-        top: element.offsetTop - offset,
-        behavior: "smooth"
+      top: element.offsetTop - offset,
+      behavior: "smooth"
     });
-}
-// Function to scroll to the top of the page
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
- // Scroll to the top when the page loads
- window.onload = function() {
+  }
+  
+  // Scroll to the top of the page on load and reload
+  window.addEventListener("load", function() {
     scrollToTop();
-};
-
-// Scroll to the top of the page on reload
-window.onbeforeunload = function () {
+  });
+  
+  window.addEventListener("beforeunload", function() {
     window.scrollTo(0, 0);
-};
-
-// Toggle menu button
-function toggleLeftMenu() {
+  });
+  
+  // Toggle menu button
+  function toggleLeftMenu() {
     const menuBtn = document.querySelector('.menu-btn');
     const leftMenu = document.querySelector('.left-menu');
-
+  
     menuBtn.classList.toggle('open');
     leftMenu.classList.toggle('open');
-}
-// Add event listeners to left menu links
-document.addEventListener("DOMContentLoaded", function() {
+  }
+  
+  // Add event listeners to left menu links
+  document.addEventListener("DOMContentLoaded", function() {
     const leftMenuLinks = document.querySelectorAll(".left-menu ul li a");
-
+  
     leftMenuLinks.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            const sectionId = this.getAttribute("href");
-
-            // Smoothly scroll to the target section
-            smoothScroll(sectionId);
-            
-            // Close the menu
-            toggleLeftMenu();
-        });
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        const sectionId = this.getAttribute("href");
+  
+        // Smoothly scroll to the target section
+        smoothScroll(sectionId);
+  
+        // Close the menu
+        toggleLeftMenu();
+      });
     });
-});
-
-// Add event listener to dark mode toggle button
-document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+  });
+  
+  // Add event listener to dark mode toggle button
+  document.getElementById("dark-mode-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
-});
-
-window.onload = function() {
+  });
+  
+  // Fade-in effect on page load
+  window.addEventListener("load", function() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach((element) => {
-        element.style.opacity = '1';
+      element.style.opacity = '1';
     });
-};
-document.addEventListener("DOMContentLoaded", function() {
-    var sections = document.querySelectorAll("section");
-    
+  });
+  
+  // Check if sections are in view
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+  
     function checkInView() {
-        sections.forEach(function(section) {
-            var rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                section.classList.add("in-view");
-            } else {
-                section.classList.remove("in-view");
-            }
-        });
+      sections.forEach(function(section) {
+        var rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          section.classList.add("in-view");
+        } else {
+          section.classList.remove("in-view");
+        }
+      });
     }
-    
+  
     window.addEventListener("scroll", checkInView);
     window.addEventListener("resize", checkInView);
-    
+  
     checkInView();
-});
-const section = document.querySelector('section');
-        const profilePhoto = document.querySelector('.profile-photo');
-
-        function disableHoverOnOverlap(element) {
-            element.addEventListener('mouseover', function () {
-                element.classList.add('no-hover');
-            });
-
-            element.addEventListener('mouseout', function () {
-                element.classList.remove('no-hover');
-            });
-        }
-
-        disableHoverOnOverlap(section);
-        disableHoverOnOverlap(profilePhoto);
+  });
+  
+  // Disable hover effect on overlapping elements
+  function disableHoverOnOverlap(element) {
+    element.addEventListener('mouseover', function() {
+      element.classList.add('no-hover');
+    });
+  
+    element.addEventListener('mouseout', function() {
+      element.classList.remove('no-hover');
+    });
+  }
+  
+  const section = document.querySelector('section');
+  const profilePhoto = document.querySelector('.profile-photo');
+  
+  disableHoverOnOverlap(section);
+  disableHoverOnOverlap(profilePhoto);
+  
+  // Show "Go to top" button on scroll
+  window.onscroll = function() {
+    scrollFunction();
+  };
+  
+  function scrollFunction() {
+    const goToTopBtn = document.getElementById("goToTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      goToTopBtn.classList.add("show");
+    } else {
+      goToTopBtn.classList.remove("show");
+    }
+  }
+  
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  

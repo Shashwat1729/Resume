@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/b18ce78f27.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <div class="menu-btn" onclick="toggleLeftMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
 
-    <div class="left-menu">
-      <h2>Left Menu</h2>
-      <ul>
-        <div class="dark-mode-toggle">
-          <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
-          <label class="slider" for="dark-mode-toggle"></label>
-          <div class="half-moon"></div>
-        </div>
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#languages">Languages</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/b18ce78f27.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <button id="goToTopBtn" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="menu-btn" onclick="toggleLeftMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  
-    
-    <header id="header">
-        <h1 class="name fade-in">Shashwat Bajpai</h1>
-        <img class="profile-photo " src="Images/profile-photo.png" alt="Profile Photo" style="width: 125px; height: 125px;">
-    </header>
-    
-    <section id="About-Me" class="About-Me">
+
+  <div class="left-menu">
+    <h2>Left Menu</h2>
+    <ul>
+      <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+        <label class="slider" for="dark-mode-toggle"></label>
+        <div class="half-moon"></div>
+      </div>
+      <li><a href="#header">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#languages">Languages</a></li>
+    </ul>
+  </div>
+
+
+  <header id="header">
+    <h1 class="name fade-in">Shashwat Bajpai</h1>
+    <img class="profile-photo " src="Images/profile-photo.png" alt="Profile Photo" style="width: 125px; height: 125px;">
+  </header>
+
+  <section id="About-Me" class="About-Me">
     <h2 class="A fade-in">About Me</h2><br>
     <p>
-        Highly motivated and detail-oriented professional with a strong background in Electronics and Communication Engineering and Economics.<br>Seeking challenging opportunities to apply my skills and knowledge in a dynamic work environment. Excellent problem-solving abilities and a collaborative mindset.
+      Highly motivated and detail-oriented professional with a strong background in Electronics and Communication
+      Engineering and Economics.<br>Seeking challenging opportunities to apply my skills and knowledge in a dynamic work
+      environment. Excellent problem-solving abilities and a collaborative mindset.
     </p>
-</section>
+  </section>
     <section id="contact" class="contact">
         <h2 class="section-heading fade-in">Contact Information</h2><br>
         <ul>
@@ -175,7 +182,23 @@
             <li><strong>Korean:</strong> Entry level proficiency</li>
         </ul>
     </section>
-
+    <footer>
+      <div class="footer-container">
+        <img class="profile-photo-f" src="Images/profile-photo.png" alt="Profile Photo">
+        <div class="footer-content">
+          <h4 class="footer-heading">Feel free to connect with me!</h4>
+          <p class="footer-name">Shashwat Bajpai</p>
+          <p class="footer-info">3rd Year, BITS Pilani, Hyderabad Campus</p>
+          <p class="footer-info">DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.</p>
+          <p class="footer-info"><a href="mailto:shashwatbajpai1729@gmail.com"><i class="fas fa-envelope footer-icon"></i> shashwatbajpai1729@gmail.com</a></p>
+          <p class="footer-info">Areas of Interest: Programming Languages, Software Engineering, Blockchain, Machine Learning</p>
+          <p class="footer-info">Location: Lucknow, India</p>
+          <p class="footer-info">Open for opportunities: Yes</p>
+          <p class="footer-credit">© 2023 | Made by Shashwat Bajpai</p>
+        </div>
+      </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
