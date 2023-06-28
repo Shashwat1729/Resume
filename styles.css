@@ -43,6 +43,7 @@ header {
   scroll-margin-right: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(to left, #333333, #222222, #057097);
+  overflow: hidden;
   z-index: 999;
   /* Add z-index property */
 }
@@ -118,6 +119,7 @@ section {
   padding: 1.625rem;
   background-color: #ffffff;
   border-radius: 15px;
+  overflow: hidden;
   opacity: 0;
   transform: translateX(-75px);
   background-image: linear-gradient(to right,
@@ -372,6 +374,7 @@ h2 {
 }
 .courses {
   margin-top: 40px;
+  margin-bottom: 55px;
 }
 
 .courses h2 {
@@ -386,10 +389,9 @@ h2 {
 }
 
 .courses li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 15px;
   font-size: 16px;
-  line-height: 1.4;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -654,6 +656,7 @@ body.dark-mode {
   margin-top: 0;
   margin-right: 30px;
   scroll-margin-right: 30px;
+  scroll-margin-bottom: 0;
   z-index: 3;
 }
 
@@ -672,6 +675,7 @@ body.dark-mode {
   margin-right: 30px;
   scroll-margin-right: 0;
   scroll-margin-top: 0;
+  scroll-margin-bottom: 30px;
   transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
   z-index: 3;
 }
@@ -736,6 +740,8 @@ footer {
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
+  overflow: hidden;
+  z-index: 3;
 }
 
 .dark-mode footer {
