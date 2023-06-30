@@ -278,9 +278,10 @@ h2 {
 .skills li {
   background-color: #057097;
   color: #ffffff;
-  padding: 5px 10px;
+  padding: 5px 5px 10px;
   border-radius: 5px;
   margin-right: 10px;
+  margin-bottom: 10px;
   font-size: 1rem;
   box-shadow: 0 2px 5px rgba(81, 86, 87, 0.542);
   background-image: repeating-linear-gradient(-45deg, #057097, #045478);
@@ -314,7 +315,7 @@ h2 {
 
 .project-description {
   margin-bottom: 5px;
-  line-height: 5px;
+  line-height: break;
   font-size: 16px;
   color: #666;
 }
@@ -376,7 +377,11 @@ h2 {
   margin-top: 40px;
   margin-bottom: 55px;
 }
-
+.course-title {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
 .courses h2 {
   font-size: 24px;
   font-weight: bold;
