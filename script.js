@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Add event listener to dark mode toggle button
 document.getElementById("dark-mode-toggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
+  document.getElementById("left-menu").classList.toggle("open");
 });
 
 // Fade-in effect on page load
@@ -114,3 +115,21 @@ function scrollFunction() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+const menu = document.getElementById('menu');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('open');
+  if (menu.classList.contains('open')) {
+    setTimeout(() => {
+      menu.classList.toggle('expanded');
+    }, 200);
+  } else {
+    menu.classList.toggle('expanded');
+  }
+});
+const menuBtn = document.querySelector('.menu-btn');
+const leftMenu = document.querySelector('.left-menu');
+
+menuBtn.addEventListener('click', () => {
+  leftMenu.classList.toggle('open');
+});
