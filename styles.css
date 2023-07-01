@@ -5,7 +5,6 @@ body {
   font-size: 1.067rem;
   transition: background-color 0.3s ease-in, margin-right 0.3s ease-in-out;
   background-color: #f2f2f2;
-  overflow-x: hidden;
   overflow-wrap: break-word;
   background-image: linear-gradient(to right, #eeeeee, #f5f5f5, #fafafa, #fdfdfd, #ffffff, #ffffff, #fdfdfd, #fafafa, #f5f5f5, #eeeeee);
 }
@@ -83,7 +82,7 @@ header {
   padding: 0.15rem;
   width: 8rem;
   height: 8rem;
-  border-radius: 50%;
+  border-radius: 35%;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
   align-self: flex-end;
@@ -107,6 +106,7 @@ section {
   overflow: hidden;
   opacity: 0;
   overflow-wrap: break-word;
+  overflow: hidden;
   transform: translateX(-5.294rem);
   background-image: linear-gradient(to right, #eeeeee, #f5f5f5, #fafafa, #fdfdfd, #ffffff, #ffffff, #fdfdfd, #fafafa, #f5f5f5, #eeeeee);
   transition: transform 0.2s ease, opacity 0.5s ease;
@@ -137,23 +137,30 @@ h2 {
 /* Adjust the margin for specific sections */
 
 .about {
-  margin-bottom: 40px;
+  margin-bottom: 3%;
+  margin-top: 1%;
 }
 
 .contact {
-  margin-top: 40px;
+  margin-bottom: 3%;
+  margin-top: 1%;
 }
 
 .education,
 .projects,
 .certifications {
-  margin-bottom: 20px;
+  margin-bottom: 3%;
+  margin-top: 1%;
 }
 
 .couses {
-  margin-bottom: 60px;
+  margin-bottom: 3%;
+  margin-top: 1%;
 }
-
+.skills {
+  margin-bottom: 3%;
+  margin-top: 1%;
+}
 /* Skills Styles */
 .skills ul {
   display: flex;
@@ -171,7 +178,8 @@ h2 {
   transition: transform 0.3s ease-in;
 }
 .education {
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
+  margin-top: 1%;
 }
 
 .education ul {
@@ -182,7 +190,7 @@ h2 {
 .education li {
   display: flex;
   align-items: center;
-  margin-bottom: 1.333rem;
+  margin-bottom: 1%;
   padding: 0.667rem;
   box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.1);
 }
@@ -214,13 +222,13 @@ h2 {
 }
 
 .experience {
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
 }
 
 .experience-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1.333rem;
+  margin-bottom: 1%
   padding: 0.667rem;
   box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.1);
 }
@@ -265,7 +273,7 @@ h2 {
 
 .projects {
   padding: 1.333rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
 }
 
 .project-list {
@@ -274,7 +282,7 @@ h2 {
 }
 
 .project-list li {
-  margin-bottom: 1.333rem;
+  margin-bottom: 1%;
   padding: 1.333rem;
   border-radius: 0.267rem;
   box-shadow: 0 0.133rem 0.267rem rgba(0, 0, 0, 0.1);
@@ -291,7 +299,7 @@ h2 {
 }
 
 .project-description {
-  margin-bottom: 0.333rem;
+  margin-bottom: 1%;
   line-height: break;
   font-size: 1.067rem;
 }
@@ -314,7 +322,7 @@ h2 {
 .certifications {
   padding: 1.333rem;
   background-color: #f7f7f7;
-  margin-bottom: 2rem;
+  margin-bottom: 3%;
 }
 
 .certification-list {
@@ -325,7 +333,7 @@ h2 {
 .certification-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 1.333rem;
+  margin-bottom: 1%;
   padding: 1rem;
   box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.1);
 }
@@ -351,8 +359,8 @@ h2 {
 }
 
 .courses {
-  margin-top: 2.667rem;
-  margin-bottom: 2rem;
+  margin-top: 1%;
+  margin-bottom: 5%;
 }
 
 .course-title {
@@ -424,8 +432,8 @@ footer {
   font-size: 1.34rem;
   position: fixed;
   top: 0;
-  left: -18.5rem;
-  width: 20rem;
+  left: 0;
+  width: 1.75%;
   height: 100%;
   background-color: #057097;
   padding: 0.781rem;
@@ -454,10 +462,9 @@ footer {
 
 .open.left-menu {
   left: 0;
-  width: 10.938rem;
-  transition: left 0.25s ease-in-out, width 0.4s, background-color 0.5s;
+  width: auto;
+  transition: left 0.25s ease-in-out, width 0.4s;
 }
-
 .left-menu ul {
   opacity: 0;
   margin-top: 3.75rem;
@@ -647,9 +654,8 @@ body.dark-mode {
 .open.left-menu ~ header .profile-photo:hover {
   align-self: flex-start;
   margin-right: 1.875rem;
-  transform: translateX(-50rem) scale(1.25);
-  transition: transform 0.2s ease-in-out 0.2s;
-  pointer-events: none;
+  transform: translateX(-50rem) scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 .dark-mode .skills li {
@@ -715,34 +721,17 @@ footer {
     font-size: small;
   }
 
-  .profile-photo,
-  header {
-    box-shadow: 0 .117rem .294rem rgba(0, 0, 0, .3);
-  }
-
-  .name::before,
-  .profile-photo:hover {
-    transition: transform .3s ease-in-out;
-  }
-
-  .name::before,
-  section {
-    background-color: #fff;
-  }
-
-  body,
-  section {
-    background-image: linear-gradient(to right, #eee, #f5f5f5, #fafafa, #fdfdfd, #fff, #fff, #fdfdfd, #fafafa, #f5f5f5, #eee);
-    font-size: small;
-  }
-
   header,
   section {
     border-radius: .882rem;
     overflow: hidden;
+    margin: 1rem;
+    margin-left: 2rem;
+    position: relative;
     scroll-margin-left: 10.29rem;
     scroll-margin-right: 0;
     font-size: small;
+  
   }
 
   .name:hover,
@@ -762,41 +751,147 @@ footer {
   ul {
     list-style: none;
   }
-.left-menu{
-  width: 3rem;
-  padding: 0.5rem;
-}
-.left-menu ul li a {
-  font-size: 1rem;
-}
-  section {
-    background-color: #fff;
-    border-radius: .882rem;
-    overflow: hidden;
-    margin: 0 0 8rem 1.75rem;
-    box-shadow: 0 .117rem .294rem rgba(0, 0, 0, .3);
-    scroll-margin-left: 10.29rem;
-    scroll-margin-right: 0;
-  }
 
   header {
-    background-color: #333;
+    background-color: #333333;
+    color: #ffffff;
     padding: 1.176rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 0.1rem 1.75rem;
-    transition: transform .3s ease-in-out, margin-left .3s ease-in-out;
-    background-image: linear-gradient(to left, #333, #222, #057097);
-    border-radius: .882rem;
+    margin: 0;
+    margin-right: 2.5%;
+    transition: opacity 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+    border-radius: 0.05rem;
+    scroll-margin-left: 10.29rem;
+    scroll-margin-right: 0;
+    overflow-wrap: break-word;
+    box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to left, #333333, #222222, #057097);
     overflow: hidden;
-    box-shadow: 0 .117rem .294rem rgba(0, 0, 0, .3);
-    z-index: 999;
+    z-index: 1;
   }
+
+  /* Mobile-specific styles for section */
+  section {
+    margin: 0;
+    margin-right: 2.5%;
+    margin-left: 1%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.882rem;
+    overflow: hidden;
+    opacity: 0;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    transform: translateX(-5.294rem);
+    background-image: linear-gradient(to right, #eeeeee, #f5f5f5, #fafafa, #fdfdfd, #ffffff, #ffffff, #fdfdfd, #fafafa, #f5f5f5, #eeeeee);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    scroll-margin-left: 10.29rem;
+    scroll-margin-right: 0;
+    box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  section:hover{
+    transform: scale(1.02);
+  }
+  /* Styles when left-menu is opened */
+  .open.left-menu {
+    left: 0;
+    width: 40%;
+    height: 100%;
+    padding: auto;
+    transition: opacity 0.25s ease-in-out;
+    background-color: rgba(5, 112, 151, 0.9);
+    z-index: 3;
+  }
+  .open.left-menu ~ header,
+  .open.left-menu ~ section {
+    filter: blur(4px);
+    margin-right: 2.5%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    transform: scale(1);
+  }
+  .open.left-menu ~ header .profile-photo {
+    transform: translateX(0) scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .left-menu ul {
+    opacity: 0;
+    margin-top: 0.75rem;
+    border-top: 0.063rem solid #fff;
+    padding-top: 0.625rem;
+    list-style: none;
+  }
+  .left-menu ul li {
+    margin-bottom: 0.625rem;
+  }
+  
+  .left-menu ul li a {
+    opacity: 1;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transform: scale(1);
+    position: relative;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+  }
+.left-menu{
+  left: -22.5rem;
+  width: 20rem;
+}
+.menu-btn {
+  position: fixed;
+  top: 0.35rem;
+  left: 0.1rem;
+  z-index: 999;
+  cursor: pointer;
+  transform: scale(0.75);
+  transition: transform 0.5s ease;
+  transform-origin: center;
+  width: 1.563rem;
+  height: 1.126rem;
+}
+
+.menu-btn:hover {
+  transform: rotate(180deg) scale(0.75);
+}
+
+.menu-btn span {
+  display: block;
+  width: 1.563rem;
+  height: 0.188rem;
+  background-color: #fff;
+  margin-bottom: 0.313rem;
+  transition: transform 0.5s;
+}
+
+.dark-mode .skills li,
+body.dark-mode,
+footer {
+  background-color: #333;
+}
+
+.open.menu-btn span:first-child {
+  transform: translateY(0.5rem) rotate(45deg);
+}
+
+.open.menu-btn span:nth-child(2) {
+  transform: translateX(3.125rem);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.35s ease-in-out;
+}
+
+.open.menu-btn span:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
 
   .name {
     font-size: 1.6rem;
-    margin: 1.25rem 2.5rem;
+    margin: 0;
     text-align: left;
     transform: scale(1);
     transition: transform .5s;
@@ -831,18 +926,17 @@ footer {
     position: relative;
     background-color: #d3d3d3;
     padding: .15rem;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: transform .3s ease-in-out, margin-right .3s ease-in-out;
-    align-self: flex-end;
-    margin-right: 2.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 35%;
+    margin-right: 0.25rem;
     transform: translateX(0);
     outline: #ffffff solid .15rem;
     background-image: radial-gradient(#d3d3d3, #333);
   }
-
+.about{
+  margin-top: 5%;
+}
   .certificate-icon,
   .education-image,
   .experience-image {
@@ -934,7 +1028,7 @@ footer {
   }
   
   .courses h2 {
-    font-size: 0.8rem;
+    font-size: 1.333rem;
     font-weight: bold;
     text-align: center;
   }
@@ -943,5 +1037,8 @@ footer {
     padding: 1rem;
     font-size: 0.75rem;
     box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.1);
+  }
+  .footer-credit{
+    line-height: 0.4rem;
   }
 }
