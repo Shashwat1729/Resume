@@ -845,11 +845,11 @@ footer {
 }
 .menu-btn {
   position: fixed;
-  top: 0.35rem;
-  left: 0.1rem;
+  top: 0.5rem;
+  left: 0.2rem;
   z-index: 999;
   cursor: pointer;
-  transform: scale(0.75);
+  transform: scale(0.85);
   transition: transform 0.5s ease;
   transform-origin: center;
   width: 1.563rem;
@@ -857,7 +857,7 @@ footer {
 }
 
 .menu-btn:hover {
-  transform: rotate(180deg) scale(0.75);
+  transform: rotate(180deg) scale(0.85);
 }
 
 .menu-btn span {
