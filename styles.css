@@ -40,8 +40,8 @@ header {
 	scroll-margin-left: 10.29rem;
 	scroll-margin-right: 0;
 	overflow-wrap: break-word;
-	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.3);
-	background-image: linear-gradient(to left, #333333, #222222, #057097);
+	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.5);
+	background-image: linear-gradient(to left, #1a1a1a, #282828, #057097);
 	overflow: hidden;
 	z-index: 999;
 	/* Add z-index property */
@@ -54,7 +54,7 @@ header {
 	transform: scale(1);
 	transition: transform 0.5s ease;
 	position: relative;
-	text-shadow: 0 0 0.235rem rgba(255, 255, 255, 0.15);
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.15);
 }
 
 .name::before {
@@ -99,8 +99,8 @@ header {
 	margin-right: 2.5rem;
 	transform: translateX(0);
 	outline: 0.15rem solid #ffffff;
-	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.3);
-	background-image: radial-gradient(#d3d3d3, #333333);
+	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.4);
+	background-image: radial-gradient(#d3d3d3, #1a1a1a);
 }
 
 .profile-photo:hover {
@@ -118,21 +118,11 @@ section {
 	overflow-wrap: break-word;
 	overflow: hidden;
 	transform: translateX(-5.294rem);
-	background-image: linear-gradient(to right,
-			#eeeeee,
-			#f5f5f5,
-			#fafafa,
-			#fdfdfd,
-			#ffffff,
-			#ffffff,
-			#fdfdfd,
-			#fafafa,
-			#f5f5f5,
-			#eeeeee);
+	background-image: linear-gradient(to right, #f5f5f5, #eaeaea, #fafafa, #f5f5f5, #ffffff, #ffffff, #f5f5f5, #fafafa, #eaeaea, #f5f5f5);
 	transition: transform 0.2s ease, opacity 0.5s ease;
 	scroll-margin-left: 10.29rem;
 	scroll-margin-right: 0;
-	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.117rem 0.294rem rgba(0, 0, 0, 0.5);
 	z-index: 3;
 }
 
@@ -216,7 +206,7 @@ h2 {
 	align-items: center;
 	margin-bottom: 1%;
 	padding: 0.667rem;
-	box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0.133rem 0.333rem rgba(0, 0, 0, 0.2);
 }
 
 .education-item {
@@ -292,7 +282,7 @@ h2 {
 	margin-bottom: 0.667rem;
 	font-size: 1rem;
 	box-shadow: 0 0.133rem 0.333rem rgba(81, 86, 87, 0.542);
-	background-image: repeating-linear-gradient(-45deg, #057097, #045478);
+	background-image: repeating-linear-gradient(-45deg, #045478, #057097);
 }
 
 .projects {
@@ -345,7 +335,6 @@ h2 {
 
 .certifications {
 	padding: 1.333rem;
-	background-color: #f7f7f7;
 	margin-bottom: 3%;
 }
 
