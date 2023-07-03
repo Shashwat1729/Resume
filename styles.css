@@ -474,8 +474,8 @@ footer {
 
 .download-btn {
 	position: fixed;
-	top: 3rem;
-	left: 7.5rem;
+	top: 4.5rem;
+	left: 7.75rem;
 	z-index: 999;
 	cursor: pointer;
 	opacity: 1;
@@ -487,8 +487,8 @@ footer {
 }
 
 .download-btn .download-icon {
-	width: 3rem;
-	height: 3rem;
+	width: 2.75rem;
+	height: 2.75rem;
 	background-color: #057097;
 	display: flex;
 	justify-content: center;
@@ -545,7 +545,7 @@ footer {
 
 .left-menu ul {
 	opacity: 0;
-	margin-top: 3.75rem;
+	margin-top: 5.75rem;
 	border-top: 0.063rem solid #fff;
 	padding-top: 0.625rem;
 	list-style: none;
@@ -596,9 +596,9 @@ footer {
 
 .dark-mode-toggle {
 	position: fixed;
-	top: 3.75rem;
+	top: 5rem;
 	left: 0.938rem;
-	margin-left: 1.25rem;
+	margin-left: 0;
 	z-index: 999;
 	width: 3.75rem;
 	height: 1.563rem;

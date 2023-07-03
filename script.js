@@ -138,7 +138,7 @@ menuBtn.addEventListener('click', () => {
 });
 
 function downloadPDF() {
-  const fileUrl = '"C:\Users\shash\Downloads\Project_Report_PS.pdf"'; // Replace with the actual URL or path of your PDF file
+  const fileUrl = "Resume.pdf"; // Replace with the actual URL or path of your PDF file
 
   const link = document.createElement('a');
   link.href = fileUrl;
