@@ -451,7 +451,7 @@ footer {
 	background-color: #057097;
 	padding: 0.781rem;
 	transition: left 0.5s, width 0.5s 0.2s, background-color 0.5s;
-	border-top-right-radius: 0.8rem;
+	border-top-right-radius: 1rem;
 	border-bottom-right-radius: 0.8rem;
 	background-image: linear-gradient(to top, #057097, #045478);
 	box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.4);
