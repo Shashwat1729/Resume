@@ -499,6 +499,10 @@ footer {
 	transform: scale(1.1);
 }
 
+.dark-mode .download-btn:hover .download-icon {
+    background: linear-gradient(to bottom, #333 0%, #222 100%);
+}
+
 .download-btn .download-icon i {
 	color: #fff;
 	font-size: 2rem;
